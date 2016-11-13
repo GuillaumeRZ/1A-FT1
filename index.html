@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<title>La guerre des blasons</title>
+    <meta name="description" content="Défendez votre famille, faites la gagner en popularité et devenez l'ultime blason de Westeros !">
+    <link rel="icon" href="images/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon:400,400italic' rel='stylesheet'>
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+                !function(){
+            var map=[]
+             ,names=[]
+             ,win=$(window)
+             ,header=$('')
+             ,currClass
+            $('').each(function(n){
+             map[n]=this.offsetTop
+             names[n]=$(this).attr('id')
+            })
+            win
+             .on('scroll',function(){
+                var i=0
+                while(map[i++]<=win.scrollTop());
+                if(currClass!==names[i-2])
+                currClass=names[i-2]
+                header.removeAttr("").addClass(names[i-2])
+             })
+            }(); });
+                    function goToByScroll(id){
+                $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+                }
+                $(document).ready(function(){
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                });
+    </script>
+	<!--<audio autoplay sound>
+	<source src="song.mp3" type="audio/mpeg">
+	</audio>-->
+</head>
+
+
+<body>
+
+    <div class="header">
+   		<div class="nuages"></div>
+        <div class="blasons">
+           <ul>
+				<li class="ecart4 animated bounceInDown"><img src="images/blasons/arryn.png"></li>
+            	<li class="ecart3 animated bounceInDown"><img src="images/blasons/baratheon.png"></li>
+            	<li class="ecart2 animated bounceInDown"><img src="images/blasons/mormont.png"></li>
+            	<li class="ecart1 animated bounceInDown"><img src="images/blasons/targaryen.png"></li>
+            	<li class="ecart animated bounceInDown"><img src="images/blasons/lannister.png"></li>
+            	<li class="ecart animated bounceInDown"><img src="images/blasons/stark.png"></li>
+            	<li class="ecart1 animated bounceInDown"><img src="images/blasons/clegane.png"></li>
+            	<li class="ecart2 animated bounceInDown"><img src="images/blasons/tully.png"></li>
+            	<li class="ecart3 animated bounceInDown"><img src="images/blasons/tyrell.png"></li>
+            	<li class="ecart4 animated bounceInDown"><img src="images/blasons/grejoy.png"></li>
+            </ul>
+        </div>
+        <div class="titres">
+            <h1>L 'affrontement se prépare...</h1>
+            <h2>mais... ce n'est pas ce que vous pensez !</h2>
+        </div>
+        <div class="little">
+            <div class="center">
+                <a onclick="goToByScroll('contenu'); return false;" href="#contenu"><img class="arrow bounce" src="images/scroll.png"></a>
+            </div>
+            <img class="littlefinger1" src="images/littlebarre.png">
+        </div>
+    </div>
+    </div>
+
+    <div id="contenu">
+        <div class="colonnegauche">
+            <div class="conceptexplications">
+                <p class="dire">J’ai bientôt finalisé mon plan, les tensions règnent entre les familles et la guerre a éclaté ! Rien ne pourra m’arrêter ! C’est presque trop facile… même avec l’aide de n’importe qui mon plan n’échouera pas ! Allez-y, aidez les, rejoignez la famille de votre choix ! mais peu importe vos actions je resterai le “Maitre de Westeros”. Il y a peut-être un moyen que votre famille récupère mon titre… Prenez-vous en photos avec la personne appartenant à la famille de votre choix et partagez-la !  Plus votre photos sera appréciée de la populace, plus votre famille gagnera de pouvoir. Votre but ? faire de votre famille la plus puissante de Westeros ! Soyez courageux mais surtout rappelez vous d’une chose !  Tous les coups sont permis ! Et soyez gentils, creusez votre tombe avant de partir cela me fera moins de travail !</p>
+                <p class="nom">Petyr Baelish</p>
+                <p class="titreexplication">Explications:</p>
+                <p class="concept">De quelle famille faites vous partie ? Montrez le nous en postant sur ce site une photo de vous avec un membre de la famille de la série que vous préférez. Tout est permis (dans la limite du raisonnable) : montages photos, dessins, Snapchats, sculptures en papier mâché.  Soyez créatifs et vous serez récompensés ! Plus votre photo obtiendra de votes, plus vous ferez monter votre famille dans le classement, et plus elle aura de chances de devenir la famille royale de Westeros pour un mois. Et si vous êtes celui/celle qui obtient le plus de votes dans votre famille, vous serez récompensé par des cadeaux officiels Game of Thrones. Mais attention ! Little Finger vous surveille, et il peut être très fourbe pour servir ses propres intérêts...</p>
+            </div>
+            <div class="graphique">
+                <p>Les graphiques seront là</p>
+            </div>
+            <div class="reseauxsociaux">
+                <p>Défendez votre famille !</p>
+                <img class="logo" src="images/titre.png">
+                <img class="logo2" src="images/facebook.png">
+                <img  class="logo2" src="images/twitter.png">
+            </div>
+        </div>
+        <div class="colonnedroite">
+            <div class="participations">
+                <p>Ils ont déjà pris parti:</p>
+                <img class="antoine" src="images/antoine.png">
+                <img class="constance" src="images/constance.jpg">
+                <img class="jordan" src="images/jordan.png">
+            </div>
+            <div class="imageslittle">
+                <img src="images/petitdoigt.png">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
